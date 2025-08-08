@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en" xml:lang="en" class="freetrial">
+<head>
+    <title>PMI VN - Hackathon: Section 2</title>
+    <link rel="shortcut icon" href="https://atoha.moodlecloud.com/theme/image.php/boost/theme/1649197205/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1103075924",accountID:"938377",trustKey:"938377",licenseKey:"1ed64959cc",applicationID:"78627"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta name="keywords" content="moodle, RTM 10 Chapter 5: Attempt review" />
+<link rel="stylesheet" type="text/css" href="https://atoha.moodlecloud.com/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://atoha.moodlecloud.com/theme/styles.php/boost/1649197205_1649197199/all" />
+
+
+<meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-mod-quiz-review" class="format-topics quiz-secure-window  path-mod path-mod-quiz chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam atoha-moodlecloud-com pagelayout-secure course-3 context-3764 cmid-562 category-3 ">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+<div id="page-wrapper">
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div>
+<style>
+	.red{color:red}
+	.green{color:green}
+	#path{width:500px}
+</style>
+<script>
+function showHide(id) {
+  var x = document.getElementById("ans_"+id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+    <nav class="fixed-top navbar navbar-light bg-white navbar-expand moodle-has-zindex" aria-label="Navigation">
+	 <h1>|Hackathon PMP - Section 2 | Bùi Quyết Chiến - PMIVN Chapter</h1>
+            <span class="site-name d-none d-md-inline">TIME</span>&nbsp&nbsp&nbsp
+			<br/>		
+			<p id="demo"></p>	
+    </nav>
+
+    <div id="page" class="container-fluid">
+
+        <div id="page-header" class="row">
+            <div class="col-12 py-3">
+                <div class="page-context-header">
+                    <div class="page-header-headings">
+ 
+						<h1>
+						Question List
+						</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-content" class="row">
+            <div id="region-main-box" class="col-12">
+                <section id="region-main" class="has-blocks" aria-label="Content" width="100%" style="padding-left:100px;">
+
+                    <span class="notifications" id="user-notifications"></span>
+                    <div role="main"><span id="maincontent"></span>
+					
+					<form action="https://atoha.moodlecloud.com/mod/quiz/review.php?attempt=53730&amp;cmid=562" method="post" class="questionflagsaveform"><div>
+					
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>1</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>You are new to the organization and have been given a few weeks to get yourself settled before starting your project in a role of a project manager. During this period, you realize that you have no authority over resources, the staff members are grouped by specialty, the budget is under the full control of those group's managers, and you as a project manager are only required to dedicate part of your time to perform the project work. What type of an organization are you working in?
+<br/>
+
+</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Weak matrix
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Functional
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Balanced matrix
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Projectized
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(1)'>Ans</a><p style='display:none;' id='ans_1'>2--Organizational structure can affect the availability of resources and influence how projects are conducted. In a functional organization, the project manager's authority over resources is little to none, the project budget is managed by the functional managers, and the project manager works on project tasks part-time. Other project characteristics in a functional organization include little to no resource availability and part-time project management administrative staff.<br/>The document you have been working on with the project initiator is the project charter. You have already secured an approved charter, as described in the scenario, making this choice an incorrect answer.<br/>The scenario implies you have been developing a project charter which then has been approved by the project sponsor. Focus groups are an example of the data gathering technique that can be used as a tool or technique during the Develop Project Charter process to bring stakeholders together to learn about the project in a conversational way. Since the project charter has already been approved, it can be assumed that the focus groups have already been facilitated.<br/>The project charter documents high-level information on the project such as key deliverables, summary milestone schedule, key stakeholder list, and project approval requirements. Therefore, sharing the approved project charter with the stakeholders will provide them with the information described in the scenario.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>2</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>While monitoring project work, the project manager notices an increase in actual costs that have not been accounted for in the original budget. To understand whether a change request to update the cost baseline should be submitted, the project manager gathers raw observations and measurements of all of the costs that have been authorized, incurred, invoiced, and paid. What has the project manager gathered?
+<br/>
+
+</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Planned value
+<br/>
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Earned value
+<br/>
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Work performance information
+<br/>
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Work performance data
+<br/>
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(2)'>Ans</a><p style='display:none;' id='ans_2'>4--Work performance data are the raw observations and measurements identified during activities performed to carry out the project work. In the scenario, the project manager collects all of the costs, which have been authorized, incurred, invoiced, and paid. Those are best described as the work performance data. Only after these raw data have been analyzed, will it become work performance information. Therefore, what the project manager has gathered was the work performance data.
+<br/>
+
+As it pertains to the scenario described, it is a good practice for buyers to include their selected evaluation method in the procurement documents, so bidders know how they will be evaluated. Commonly used selection methods include least cost, qualifications only, quality-based/highest technical proposal score, quality and cost-based, sole source, or fixed budget. To position your company as the best fit for the project, it is essential for you to understand the requirements and selection criteria that you need to meet as a seller. Therefore, of the choices provided, looking for the selection method in the procurement documents of the utility company's bid package is the best answer to the question asked.
+<br/>
+
+Note, the complete source selection criteria is not always provided by the buyer to the seller. These criteria are often internal for the buying organization. However, some subset of the criteria can be exposed to the prospective sellers to provide them with a better understanding of what the buyer is looking for besides the technical details of the solution.<br/>Without first thoroughly reading the bid package, you would not be prepared to ask useful questions or even assessing whether your company meets the minimum requirements.<br/>Independent cost estimates are typically developed by the buying organization, while in the scenario described you are the seller.<br/>The bid package from the buyer should provide you as a seller all the requirements and selection criteria that you need to meet.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>3</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>Project team members develop a document that describes values that are important to the team's success such as sharing best practices, listening to each other with an open mind, and communicating respectfully during meetings.
+<br/>
+
+What would be the result of the team's effort?</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Team management plan
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Team charter
+
+
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Resource management plan
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Resource requirements
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(3)'>Ans</a><p style='display:none;' id='ans_3'>B --The question asks about a document that defines the team's values and guidelines. This document is the team charter. The team charter establishes clear expectations regarding acceptable behavior by project team members and is an output of the Plan Resource Management process. Did you notice that the team charter is developed during project planning, but the scenario describes the presence of a team, suggesting the Acquire Resources process, an executing process, has already occurred? This situation illustrates the iterative nature of project management. Ideally, you want the team to create the team charter or at least have the team's input during the charter development. However, it is not always possible. To overcome this, the iterative nature of the project management allows the Plan Resource Management process, or any other process for that matter, to be performed several times during the project life cycle. New documents may be developed, or existing documents may be updated as the project progresses and more information becomes available.<br/>The team management plan is a component of the resource management plan that describes when and how team members will be acquired and how long they will be needed. The team management plan does not have information on team values as presented by the scenario.<br/>The team charter is a document that records the team values, agreements, and operating guidelines, as well as establishing clear expectations regarding acceptable behavior by project team members.<br/>The resource management plan is a component of the project management plan that describes how project resources are acquired, allocated, monitored, and controlled. This plan does not provide guidance on the items discussed by the team members in the scenario.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>4</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>You are leading a project that was supposed to be managed using agile methods. Every week, however, the product owner holds a five-hour backlog refinement meeting with the project team where she presents the project scope broken down to the work package level. After three iterations, the project team's velocity is slower than expected. What is your best course of action?
+<br/>
+
+Which of the following actions should you take to resolve this situation?</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Ask the product owner to decompose the scope down to the task level and assign the tasks to the team members
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Advise the product owner to hold two five-hour backlog refinement meetings per week to gain further clarity on the scope
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Coach the product owner on presenting the overall story concept with one-hour weekly backlog refinement meetings
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Hold a team-building exercise with the team members and product owner to improve the communication between them
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(4)'>Ans</a><p style='display:none;' id='ans_4'>3--The scenario suggests that the product owner is using a waterfall approach to decompose the product scope, whereas the question indicates that an agile project management framework is being used. In a traditional waterfall project, the project scope is decomposed down to the work package level to create the work breakdown structure (WBS). On agile projects, on the other hand, the product scope is captured in the product backlog, which evolves throughout the course of the project. Agile best practices recommend that teams allocate no more than one hour per week for backlog refinement. Such an approach would allow the team to maximize the time spent developing the product increment rather than creating a detailed plan. Instead of attempting to present an updated WBS every week, the product owner should just present the overall story concept to the team and then spend no more than an hour refining the stories. This approach will free up time for the team, thus improving velocity.<br/>he vendor likely understands the importance of protecting IP in general. However, in this scenario, your contract with the vendor did not include an IP clause, so they are not obligated to protect your customer's IP. Therefore, including the vendor in client meetings without adding the IP clause into the contract is unlikely to resolve the issue at hand.
+<br/>
+
+B<br/>There is nothing in the scenario that indicates that the vendor is bound by an IP clause or is sharing a design that is protected by the intellectual property of another client. In the described scenario, your company failed to obtain assurance from the vendor you outsourced the design work to that your customer's design would be unique and become part of your customer's IP. Canceling the contract with the vendor would be a rash and groundless decision that could result in delays due to the time required to identify and contract with another vendor for the design.<br/>Showing the designs to the customer to get approval before beginning the manufacturing of the components is unethical; you know the designs are not unique and violate the contract with the customer.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>5</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>During your most recent conference call, the key stakeholders suggest that it would be more helpful to them if the status reports were sent via email instead of the weekly call.
+<br/>
+
+What area of communications management will you have to change to address the stakeholders' request?</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>The communication method
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>The communication model
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>The project communications
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>The communication channels
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(5)'>Ans</a><p style='display:none;' id='ans_5'>A --Communication methods describe how information is transferred one-to-one or to groups of individuals. These methods are grouped into the following categories: interactive communication, push communication, and pull communication. Email is an example of push communication. When choosing a communication method, it is advisable to include the stakeholders in the final decision, so their communication needs will be met. Communication models describe the process by which information is shared and has three main parts: the sender, the message, and the receiver. Considering both communication models and communication methods will lead to the most effective communication. In the scenario provided, the stakeholders are requesting the project manager to use email as a method in which the information is shared with them. Therefore, of the choices given, the communication method is the best answer.
+<br/>
+
+<br/>Communication methods describe the way information is transferred and can be grouped into the following categories: interactive communication, push communication, and pull communication. In this scenario, the stakeholders are requesting you to switch the method used to share information with them from conference calls to email, or from an interactive method to a push method. Since the communication method is changing, this choice is correct.<br/>Communication models describe the process of communication in its most basic form: the sender, the message, and the receiver. In this scenario, the process of communication is not changing as it still involves the sender, message, and receiver, but the way the information is transferred is switching from phone to email. Therefore, the communication model is not the correct choice.<br/>The project communications are all project documents and artifacts created during the project lifecycle. Sending the status reports via email instead of having a weekly call does not change all project documents and artifacts created during the project lifecycle, making this choice an incorrect answer.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>6</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>A manufacturer has initiated a project as the result of a Lean Six Sigma value stream mapping exercise of its production process.
+<br/>
+
+In this scenario, which specific factor led to the creation of the project?</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Market demand
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Competitive forces
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Business process improvements
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Stakeholder demands
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(6)'>Ans</a><p style='display:none;' id='ans_6'>C --Value stream mapping is a lean enterprise technique used to document, analyze, and improve the flow of information or materials required to produce a product or service for a customer. The question describes a situation where the company has analyzed its production process and recommended improvements, which can be made with the initiation of a project to realize greater efficiency. Even though the scenario describes a manufacturing process, the value stream mapping technique is often used on knowledge projects carried out using the agile framework.
+<br/>
+
+An argument can be made that any of the answer choices represent factors that may have played a role in the decision to move forward with the project. However, a Lean Six Sigma value stream exercise as it relates to a production process is specifically related to process improvements to gain greater efficiencies in capital, labor, and/or materials. Therefore, of the available choices, business process improvements provide the best answer to the question asked.<br/>A change in market demand may drive a company to update their offerings of products or services. For example, an increase in fuel costs may cause consumers to seek more fuel-efficient cars. However, the question describes the implementation of process improvement rather than a response to a change in market demand.<br/>The question suggests that a project was initiated to improve the efficiency of a manufacturing process. Although competitive forces may provide the incentive to improve the efficiency of a production line, there is another answer choice that more directly addresses the situation described by the question.<br/>The question describes a situation where the company has analyzed its production process and recommended improvements, which can be made with the initiation of a project to realize greater efficiency.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>7</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>You are leading a software development project, which requires knowledge of several programming languages. During project execution, one of the developers has been pulled out of the project by her functional manager. The manager provided you with another developer instead. What should you do first?
+<br/>
+
+</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Provide the new developer with an ability test
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Introduce the new developer to the project sponsor
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Schedule training for the new developer
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Assign the developer the next user story in the backlog
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(7)'>Ans</a><p style='display:none;' id='ans_7'>1--Individual and team assessments are tools that may be useful in the Develop Team process. Individual and team assessment tools give the project manager and the project team insight into areas of strengths and weaknesses. These tools help project managers assess team members' preferences, aspirations, how they process and organize information, how they make decisions, and how they interact with people. Various tools are available such as attitudinal surveys, specific assessments, structured interviews, ability tests, and focus groups. An ability test would provide an assessment of the new developer's existing competencies in order to determine what, if any, gaps in skill set exist and how they might be addressed. The incorrect answer choices represent actions which are premature without understanding the new developer's existing competencies. Of the available options, providing the new developer with an ability test to evaluate the developer's existing competencies is what you, as the project manager should do first.
+<br/>
+
+<br/>The diagram presented in the question is an example of a data representation technique referred to as mind mapping. Mind mapping is used to visually organize information about stakeholders and their relationship to each other and the organization.<br/>This answer choice describes a stakeholder engagement assessment matrix. The matrix compares the current and desired stakeholder engagement levels. The diagram presented in the question does not provide stakeholder engagement levels, making this answer choice incorrect.<br/>Root cause analysis identifies underlying reasons for the level of support of project stakeholders. The diagram presented in the question does not indicate reasons for the level of support of project stakeholders. Therefore, this answer choice can be eliminated.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>8</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>A project to redesign a website has gone through several rounds of usability testing with customers and has finally received formal acceptance of the deliverables. To close out the project, the project manager gathers the key stakeholders in a room to demonstrate the website before it goes live.
+<br/>
+
+What is the project manager seeking to gain from this demonstration?</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Quality inspection of the redesign deliverables
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Obtaining formal acceptance of project deliverables from stakeholders
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Feedback for design improvements
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Confirmation that the product scope and deliverables were achieved
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(8)'>Ans</a><p style='display:none;' id='ans_8'>D --The scenario implies the project has entered its final stage, closure, where processes of the Closing Process Group are performed. To adequately complete and close a project, it is necessary for the project manager to obtain 'confirmation' from the customer that the project deliverables have been formally accepted. 'Confirming' the acceptance of the project deliverables during the Close Project or Phase process is different from 'obtaining' formal acceptance of the deliverables during the Validate Scope process. The scenario implies the Validate Scope process has been completed. Therefore, since the project has entered its closure, the project manager is seeking to obtain confirmation that the product scope and deliverables were achieved. By obtaining final acceptance, the project manager is essentially 'confirming' the delivery and formal acceptance of deliverables by the relevant stakeholders. Sometimes, this can be viewed as ticking a checkbox in the checklist of the activities carried out during project closure. It is like asking a question, ""Have the deliverables been accepted earlier in the project as part of the Validate Scope process?"". If the answer is ""Yes"", check the box. This would eventually confirm that the deliverables have already been accepted and that the relevant stakeholders are aware of this fact and agree that the project can now be closed. This is a subtle distinction, and many PMP aspirants struggle with this concept.
+<br/>
+
+This question is a good example of what you will see on your real exam – two answer choices arguably being correct answers. The main lesson to take from this question is to be ready during the real exam to face ambiguous questions with answer choices extremely close to one another and always select the answer choice you think is the best of those provided. It will not always be the ideal answer or the answer you would like to see as the correct one, but it should be better than the others. Unfortunately, on the real exam, you will never know the actual correct answer to a particular question. You will only see your final result and will be unable to contact the PMI and argue with them on the correctness of their answers. Therefore, the best advice we can provide you while you are preparing for and taking your exam is to make reasonable assumptions based on all available information in the scenario and, of the choices given, select the ‘best’ answer to the question asked or the answer you believe should be the correct one.<br/>Inspection of deliverables takes place in the Control Quality process. This process results in verified deliverables that are then used as an input into the Validate Scope process. The question states the project manager is seeking to close out the project implying the Close Project or Phase process is being carried out, which, in turn, means that inspecting the quality of the redesign deliverables would have already taken place.<br/>While this answer choice sounds like a plausible option, the formal acceptance of project deliverables should be obtained from the customer, not from the stakeholders. Additionally, the process of 'obtaining' the formal acceptance happens prior to project closure, as part of the Validate Scope process. The Close Project or Phase process described in the scenario is concerned with 'confirming' the delivery and formal acceptance not with 'obtaining' formal acceptance. Finally, the scenario states that the project has already received formal acceptance of the deliverables, thus eliminating the need to obtained formal acceptance of project deliverables again.<br/>Obtaining feedback for design improvements would have occurred prior to performing closing processes, and therefore this answer choice is not the correct answer.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>9</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>A new developer has joined an agile team in the middle of project execution. During the tour of the work area, the scrum master gives a brief overview of the agile practices used by the team and introduces the new developer to the team members.
+<br/>
+
+What would be the next most logical step for the scrum master to take in this situation?</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Set up a project kick-off meeting to introduce the new developer
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Let the team members introduce the project to the new developer
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Assign the new developer a user story that can be easily accomplished
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Ask the new developer to read the team's ground rules and processes
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(9)'>Ans</a><p style='display:none;' id='ans_9'>B --Agile emphasizes servant leadership as a way to empower teams, encouraging them to be self-organizing and self-managing. The scrum master best demonstrates agile values by letting the team members orient the new developer on the project. Having the team members take over some of the coaching responsibilities highlights valuing people over processes. Agile practices embrace face-to-face communication, providing leadership opportunities, and building trust. The focus should be on the people vs. the processes. If you have good processes but low-skilled employees, success is not guaranteed. However, strong and talented people will be able to find a way to accomplish almost any task even when processes are weak.<br/>The project kick-off meeting is held at the beginning of the project, which, as the scenario implies, has already past. Apart from the project kick-off meeting, there are many other agile events that provide the opportunity for face-to-face communication, such as daily standups, as well as sprint planning, review, and retrospective meetings.<br/>Letting the team members introduce the project to the new developer empowers the team members. It provides the team with a leadership opportunity as well as a strong sense of ownership for the project.<br/>On agile projects, tasks are not assigned to team members by the scrum master or anyone else. Tasks are pulled from the backlog by the team members based on agreed-upon rules.<br/></p></div></div></div></div><br/>
+<div  class='que multichoice deferredfeedback correct'><h3 class='no'>Question <span class='qno'>10</span></h3><div class'content'><div class='formulation clearfix'><h4 class='accesshide'>Question text</h4><input type='hidden' name='q54562:1_:sequencecheck' value='3'><div class='qtext'>The project manager is conducting a meeting to gain approval for the project management plan. The project sponsor notices that a component that was always included in the project management plans of previous projects is missing from the current plan and requests that the project manager add the component to the plan.
+<br/>
+
+How should the project manager respond?</div><div class='ablock no-overflow visual-scroll-x'><div class='answer'><div class='r0'><input type='checkbox' name='q54562:1_answer' value='0' id='q54562:1_answer0' aria-labelledby='q54562:1_answer0_label'><div class='d-flex w-auto' id='q54562:1_answer0_label' data-region='answer-label'><span class='answernumber'>A. </span><div class='flex-fill ml-1'>Ignore the sponsor's request since the project management plan is the responsibility of the project manager
+
+</div></div> </div><div class='r1 correct'><input type='checkbox' name='q54562:1_answer' value='1' id='q54562:1_answer1' aria-labelledby='q54562:1_answer1_label'><div class='d-flex w-auto' id='q54562:1_answer1_label' data-region='answer-label'><span class='answernumber'>B. </span><div class='flex-fill ml-1'>Explain that the needs of the project determine which components of the project management plan are included
+
+</div></div></div><div class='r0'><input type='checkbox' name='q54562:1_answer' value='2' id='q54562:1_answer2' aria-labelledby='q54562:1_answer2_label'><div class='d-flex w-auto' id='q54562:1_answer2_label' data-region='answer-label'><span class='answernumber'>C. </span><div class='flex-fill ml-1'>Update the plan as requested by the project sponsor since the plan's components are determined by the sponsor
+
+</div></div> </div><div class='r1'><input type='checkbox' name='q54562:1_answer' value='3' id='q54562:1_answer3' aria-labelledby='q54562:1_answer3_label'><div class='d-flex w-auto' id='q54562:1_answer3_label' data-region='answer-label'><span class='answernumber'>D. </span><div class='flex-fill ml-1'>Ask the meeting participants to vote for those components of the project management plan they think should be included
+
+</div></div> </div></div></div><div class='answer'><a class='ans' onclick='showHide(10)'>Ans</a><p style='display:none;' id='ans_10'>B --The needs of the project determine which components of the project management plan are needed. Some projects may not require all of the possible components of the project management plan, and their inclusion would be superfluous. In these cases, the project manager should determine the needs of the project and build a project management plan with the appropriate level of detail. Creating an overly elaborate project management plan is not an effective use of project resources.<br/>Ignoring the sponsor's request is unlikely to be the best course of action for the project manager. The project manager should explain to the sponsor that the contents of the project management plan may vary from project to project and are determined according to the needs of the project.<br/>The needs of the project determine which components of the project management plan are needed. The project manager should determine the needs of the project and build a project management plan with the appropriate level of detail.<br/>The project sponsor may offer valuable feedback on the content of the project management plan which should be taken into account. However, the needs of the project determine which components of the project management plan are included. Creating an overly elaborate project management plan is not an effective use of project resources. The project manager should explain to the sponsor why certain components have been excluded from the plan.<br/></p></div></div></div></div><br/>
+
+
+                </section>
+                <section data-region="blocks-column1" aria-label="Blockss">
+                    <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Skip <span id="mod_quiz_navblock_title">Quiz navigation</span></a>
+
+<section id="mod_quiz_navblock"
+     class=" block block_fake  card mb-3"
+     role="navigation"
+     data-block="_fake"
+          aria-labelledby="instance-fakeid-62a6c465a8283-header"
+     >
+
+
+<script>
+// Set the date we're counting down to
+var distance = 3600000;
+// Update the count down every 1 second
+var x = setInterval(function() {
+    
+  // Find the distance between now and the count down date
+  distance = distance - 1000;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = "<h3 style='color:red'>" +hours + "h " + minutes + "m " + seconds + "s </h3>";;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "<b style='color:red'>EXPIRED</b>";
+  }
+}, 1000);
+</script>
+
+</section>
+
+  <span id="sb-1"></span></aside>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer id="page-footer" class="py-3 bg-dark text-light">
+        <div class="container">
+            <div id="course-footer"></div>
+        </div>
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		if (localStorage.getItem('Path')!=null && localStorage.getItem('Path')!="undefined"){
+			$("#path").val(localStorage.getItem('Path'));
+		} else $("#path").val("Image");
+		function showImage(src, element) {
+			var img = document.createElement("img");
+			img.src = src;
+			img.alt='';
+			// This next line will just add it to the <body> tag
+			element.append(img);
+		}
+		$( ".deferredfeedback" ).each(function( index ) {
+			var num = index+1;
+			showImage($("#path").val()+"\\"+num+".jpg", $(this));
+		});
+		if (localStorage.getItem('Score1')!=null && localStorage.getItem('Score1')!="undefined"){
+			var data = localStorage.getItem('Score1').split(',');
+			var ans = '';
+			$( ".deferredfeedback" ).each(function( index ) {
+				ans = data[index];
+				$(this).find(".ablock .answer input[type='checkbox']").each(function( index ) {
+					if (ans.split('-').includes((index+1)+'')){
+						$(this).prop("checked", true);
+					}
+				})
+			})
+		}
+		$("#secureclosebutton").click(function(){
+			var sum = $( ".deferredfeedback" ).length;
+			var score=0;
+			var count=0;
+			var data=[];
+			var answer='';
+			$( ".deferredfeedback" ).each(function( index ) {
+				var ans = $(this).find(".answer .ans").next().text().split('--')[0].split(',');
+				answer='';
+				count = 0;
+				$(this).find(".ablock .answer input[type='checkbox']").each(function( index ) {
+					if ($(this).prop("checked") && ans.includes((index+1)+'')){
+						$(this).parent().addClass("green");
+						count++;
+					}
+					else $(this).parent().addClass("red");
+					if ($(this).prop("checked")) answer+=(index+1)+'-';
+				})
+				data.push(answer);
+				if (ans.length==count) score++;
+			})
+			localStorage.setItem('Score1',data);
+			
+			alert("Your score is: "+Math.round(score/sum*100)+" %");
+		})
+		$( "#save" ).click(function(){
+			localStorage.setItem('Path',$("#path").val());
+		})
+	})
+</script>
+
+</html>
